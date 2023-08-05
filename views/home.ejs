@@ -1,0 +1,40 @@
+<link rel="stylesheet" href="/css/home.css">
+
+<div id="main">
+    <section id="section_one">
+        <% if(locals.user){ %>
+        <div id="form_div">
+            <form action="/posts/create" id="new-post-form" method="post" >
+                <textarea name="content"  cols="30" rows="3" placeholder="Type Here....">
+                </textarea>
+                <button type="submit">post</button>
+            </form>
+        </div>
+           <% } %>
+        <div id="postList_div">
+            <ul>
+            <% for(let post of posts ) {%>
+                <%- include('_post',{post}); %>
+            <%}%>
+        </ul>
+        </div>
+        
+    </section>
+    <section id="section_two">
+
+    </section>
+    
+    <section id="section_three">
+        <h4>
+            Friends
+        </h4>
+        <% for(let u of all_users){%>
+            <p>
+                <a href="/users/profile/<%= u._id %>"> <%= u.name %></a>
+            </p>
+            
+        <%}%>
+    </section>
+</div>
+
+<script src="/js/home_posts.js"></script>

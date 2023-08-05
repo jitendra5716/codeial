@@ -1,0 +1,30 @@
+footer{
+    /* height: 10vh; */
+    width: 100%;
+    background-color: gray;
+    /* position:sticky; */
+    /* bottom: 0px; */
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+}
+footer p{
+    color: #fff;
+    font-size: 1rem;
+    margin-left: 15px;
+}
+footer ul{
+    display: flex;
+    width: 20%;
+    align-items: center;
+    justify-content: space-around;
+}
+footer ul li{
+    list-style: none;
+}
+footer ul li a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.2rem;
+}
